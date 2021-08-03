@@ -1,0 +1,167 @@
+
+/*---------------------------------------------------Réglages généraux----------------------------------------------------------*/ 
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    color: black;
+}
+
+/*-----------------------------------------------Entête du site-----------------------------------------------------------------*/
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.logo_reservia{
+    width: 50%;
+    padding-left: 16px;
+}
+.navigation_1,.navigation_2,.navigation_3 {
+    width: 50%;
+}
+.navigation_1 {
+    text-align: right;
+    padding-right: 16px;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+.navigation_2,.navigation_3 {
+    text-align: center;
+    height: 49px;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+.navigation_1 a{
+    width: 100%;
+    color: blue;
+}
+.navigation_2 a,.navigation_3 a {
+    width: 100%;
+    color: black;
+
+}
+.navigation_2:hover,.navigation_3:hover {
+    border-bottom: blue 2px solid;
+}
+.navigation_2 a:hover,.navigation_3 a:hover{
+    color: blue;
+} 
+    
+header a{
+    text-decoration: none;
+}
+
+/*------------------------------------------------------------------Menu de gavigation------------------------------------------------------*/
+
+nav {
+    padding-left: 16px;
+    padding-right: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+form{
+    display: flex;
+    width: 40%;
+
+}
+
+form label{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    background-color: #DCDCDC;
+    border-radius: 7px 0px 0px 7px;
+}
+
+form label img {
+    height: 20px;
+    width: 20px;
+    background-color: #DCDCDC;
+}
+form button{
+    padding: 0px;
+    border: 0px;
+    height: 30px;
+    width: 30px;
+    border-radius: 7px 7px 7px 7px;
+    margin-left: -4px;
+    z-index: 2;
+}
+form button img{
+    height: 30px;
+    width: 30px;
+    border-radius: 7px 7px 7px 7px;
+}
+form input {
+    color: black;
+    border-left: 0px ;
+    border-right: 0px ;
+    border-top: 1px solid #DCDCDC ;
+    border-bottom: 1px solid #DCDCDC ;
+    height: 30px;
+    z-index: 1;
+}
+
+/*-------------------------------Navigation liste à puce (Filtre)--------------------------------------*/
+
+nav ul {
+
+    padding-left: 0px;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+nav div ul li {
+    
+    height: 30px;
+    width: 160px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #DCDCDC ;
+    border-bottom: 1px solid #DCDCDC ;
+    border-right: 1px solid #DCDCDC ;
+    border-radius: 25% 28% 28% 25%;
+}
+nav li div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    border: 2px solid #DEEBFF; 
+    border-radius: 50%;
+    background-color: #DEEBFF;
+}
+nav div ul li p {
+    margin-left: 5px;
+}
+
+nav li img{
+    height: 20px;
+    width: 20px;
+}
+
+/*------------------------------------------------------Navigation information----------------------------------------------------*/
+
+.info{
+    display: flex;
+    align-items: center;
+}
+.info img {
+    width: 20px;
+    height: 20px;
+}
+.info h4{
+    margin-left: 10px ;
+}
+

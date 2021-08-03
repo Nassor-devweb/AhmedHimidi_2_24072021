@@ -10,24 +10,28 @@
 
   <link rel="icon" href="/favicon.ico">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="Stylesheet/style.css">
 
 </head>
 
 <body>
     <div class="bloc_page">
-        <!--Entête du siteweb-->
+        <!---------------------------------------------------------------Entête du siteweb------------------------------------------------------------------------------->
       <header>
-          <div>
-            <h1>Reservia</h1>  
+          <div class="logo_reservia">
+            <img src="Images/logo/Reservia.svg" alt="Logo_site">  
           </div>
-          <div>
-            <div><h4>Hébergements</h4></div> 
-            <div><h4>Activités</h4></div> 
-            <div><h4>S'inscrire</h4></div>
+          <div class="navigation_1">
+            <a href="#">S'inscrire</a>
           </div>
+          <div class="navigation_2">
+            <a href="#">Hébergements</a>
+          </div>
+          <div class="navigation_3">
+            <a href="#">Activités</a>
+          </div>        
       </header>
-      <!--Menu de navigation-->
+      <!-----------------------------------------------------------------Menu de navigation------------------------------------------------------------------------------>
       <nav>
           <div>
             <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
@@ -35,76 +39,122 @@
           </div>
           <div>
             <form>
-              <label for="Recherche-ville">Recherche</label>
+              <label for="Recherche-ville"><img src="Images/Icon_filtres/Localisation.png" alt=""></label>
               <input type="search" id="Recherche-ville" placeholder="marseille,Fance">
-              <button>Rechercher</button>
+              <button><img src="Images/Icon_filtres/Recherche.png" alt=""></button>
             </form>
           </div>
           <div>
             <h5>Filtres</h5>
-            <select name="" id="">
-              <option value="">Economique</option>
-              <option value=""></option>
-            </select>
-            <select name="" id="">
-                <option value="">Familial</option>
-                <option value=""></option>
-            </select>
-            <select name="" id="">
-                <option value="">Romantique</option>
-                <option value=""></option>
-            </select>
-            <select name="" id="">
-                <option value="">Animaux autorisés</option>
-                <option value=""></option>
-              </select>  
+            <ul>
+                <li><div><img src="Images/Icon_filtres/Economique.png" alt="eco_icon"></div><p>Economique</p></li>
+                <li><div><img src="Images/Icon_filtres/Famille.png" alt="ico_famille"></div> <p>Familial</p></li>
+                <li><div><img src="Images/Icon_filtres/Romantique.png" alt="ico_romantique"></div> <p>Romantique</p></li>
+                <li><div><img src="Images/Icon_filtres/animaux.png" alt="ico_animaux"></div><p>Animaux autorisés</p></li>
+            </ul>
           </div>
-          <div>
+          <div class="info">
+            <img src="Images/Icon_filtres/Information.png" alt="ico_info">
             <h4>Plus de 500 logements sont disponible dans cette ville </h4> 
           </div>
       </nav>
-      <!--Section 1-->
+      <!------------------------------------------------------------------------Section 1-------------------------------------------------------------------------------->
       <section>
+        <div>
+          <h3>Hébergement à Marseille</h3>
           <div>
-            <h3>Hébergement à Marseille</h3>
-            <img src="" alt="" title=""> 
-            <img src="" alt="" title="">
-            <img src="" alt="" title="">
-            <img src="" alt="" title="">
-            <img src="" alt="" title="">
-            <img src="" alt="" title="">
+              <div id="Cannebière">
+                  <div>
+                    <a href=""> <p>Auberge la cannebière</p> <p>Nuit à partir de 25</p> <img src="" alt=""> </a>
+                  </div>
+              </div>
+              <div id="Cannebière">
+                <div>
+                  <a href=""> <p>Auberge la cannebière</p> <p>Nuit à partir de 25</p> <img src="" alt=""> </a>
+                </div>
+              </div>
+              <div id="Cannebière">
+                <div>
+                  <a href=""> <p>Auberge la cannebière</p> <p>Nuit à partir de 25</p> <img src="" alt=""> </a>
+                </div>
+              </div>
+              <div id="Cannebière">
+                <div>
+                  <a href=""> <p>Auberge la cannebière</p> <p>Nuit à partir de 25</p> <img src="" alt=""> </a>
+                </div>
+              </div>
+              <div id="Cannebière">
+                <div>
+                  <a href=""> <p>Auberge la cannebière</p> <p>Nuit à partir de 25</p> <img src="" alt=""> </a>
+                </div>
+              </div>
+              <div id="Cannebière">
+                <div>
+                  <a href=""> <p>Auberge la cannebière</p> <p>Nuit à partir de 25</p> <img src="" alt=""> </a>
+                </div>
+              </div>
           </div>
+        </div>
+        <div>
+          <h3>Les plus populaires</h3>
           <div>
-              <h3>Les plus populaires</h3>
-            <img src="" alt="" title="">
-            <img src="" alt="" title="">
-            <img src="" alt="" title="">
-            <img src="" alt="" title="">
+              <div id="Cannebière">
+                <div>
+                  <a href=""> <p>Auberge la cannebière</p> <p>Nuit à partir de 25</p> <img src="" alt=""> </a>
+                </div>
+              </div>
+              <div id="Cannebière">
+                  <div>
+                    <a href=""> <p>Auberge la cannebière</p> <p>Nuit à partir de 25</p> <img src="" alt=""> </a>
+                  </div>
+              </div>
+              <div id="Cannebière">
+                  <div>
+                    <a href=""> <p>Auberge la cannebière</p> <p>Nuit à partir de 25</p> <img src="" alt=""> </a>
+                  </div>
+              </div>
           </div>
+        </div>
       </section>
-      <!--Section 2-->
+      <!------------------------------------------------------------------------Section 2-------------------------------------------------------------------------------->
       <section>
+        <div>
           <h3>Activités à Marseille</h3>
           <div>
-            <img src="" alt="" title="">
+              <div id="Cannebière">
+                <div>
+                  <a href=""> <p>Auberge la cannebière</p> <p>Nuit à partir de 25</p> <img src="" alt=""> </a>
+                </div>
+              </div>
+              <div id="Cannebière">
+                <div>
+                  <a href=""> <p>Auberge la cannebière</p> <p>Nuit à partir de 25</p> <img src="" alt=""> </a>
+                </div>
+              </div>
+              <div id="Cannebière">
+                <div>
+                  <a href=""> <p>Auberge la cannebière</p> <p>Nuit à partir de 25</p> <img src="" alt=""> </a>
+                </div>
+              </div>
+              <div id="Cannebière">
+                <div>
+                  <a href=""> <p>Auberge la cannebière</p> <p>Nuit à partir de 25</p> <img src="" alt=""> </a>
+                </div>
+              </div>
+              <div id="Cannebière">
+                <div>
+                  <a href=""> <p>Auberge la cannebière</p> <p>Nuit à partir de 25</p> <img src="" alt=""> </a>
+                </div>
+              </div>
+              <div id="Cannebière">
+                <div>
+                  <a href=""> <p>Auberge la cannebière</p> <p>Nuit à partir de 25</p> <img src="" alt=""> </a>
+                </div>
+              </div>
           </div>
-          <div>
-            <img src="" alt="" title="">
-          </div>
-          <div>
-            <img src="" alt="" title="">
-          </div>
-          <div>
-            <img src="" alt="" title="">
-          </div>
-          <div>
-            <img src="" alt="" title="">
-          </div>
-          <div>
-            <img src="" alt="" title="">
-          </div>
+        </div>
       </section>
-      <!--Pied de page-->
+      <!----------------------------------------------------------------------Pied de page------------------------------------------------------------------------------->
       <footer>
           <div>
             <h4>A propos</h4>
