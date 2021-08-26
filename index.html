@@ -1,218 +1,357 @@
 <!doctype html>
-
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reservia</title>
   <meta name="description" content="Trouvez votre hébergement pour des vacances de rêve.">
   <meta name="Ahmed" content="OpenClassrooms">
-
-  <link rel="icon" href="/favicon.ico">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="Stylesheet/style.css">
-
+  <script src="https://kit.fontawesome.com/b08575133e.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="bloc_page">
         <!---------------------------------------------------------------Entête du siteweb------------------------------------------------------------------------------->
       <header>
-          <div class="logo_reservia">
-            <img src="Images/logo/Reservia.svg" alt="Logo_site">  
-          </div>
-          <div class="navigation_1">
-            <a href="#">S'inscrire</a>
-          </div>
-          <div class="navigation_2">
-            <a href="#">Hébergements</a>
-          </div>
-          <div class="navigation_3">
-            <a href="#">Activités</a>
-          </div>        
+          <nav class="entete_navigation">
+              <div class="logo_reservia">
+                <img src="Images/logo/Reservia.svg" alt="Logo_site">  
+              </div>
+              <div class="navigation_1">
+                <a href="#">S'inscrire</a>
+              </div>
+              <div class="navigation_2">
+                <a href="#ancre_hebergements">Hébergements</a>
+              </div>
+              <div class="navigation_3">
+                <a href="#ancre_activité">Activités</a>
+              </div>        
+          </nav>
       </header>
       <!-----------------------------------------------------------------Menu de navigation------------------------------------------------------------------------------>
-      <nav>
-          <div>
+      <nav class="navigation_recherche">
+          <div class="Titre_nav">
             <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
             <p>En plein centre ville ou en pleine nature</p>
           </div>
           <div id="form_localisation">
-            <form>
-              <label for="Recherche-ville"><img src="Images/Icon_filtres/Localisation.png" alt=""></label>
-              <input type="search" id="Recherche-ville" placeholder=" marseille,France">
-              <button><img src="Images/Icon_filtres/Recherche.png" alt=""></button>
-            </form>
+              <form>
+                  <label for="Recherche-ville">
+                      <i class="fas fa-map-marker-alt"></i>
+                  </label>
+                  <input type="search" id="Recherche-ville" placeholder=" Marseille, France">
+                  <button class="bouton_search">
+                      <i class="fas fa-search" id="seach"></i>
+                  </button>
+              </form>
           </div>
-          <div>
-            <h5>Filtres</h5>
-            <ul>
-                <li class="li_economique">
-                    <div class="bordure_img">
-                      <img src="Images/Icon_filtres/Economique.png" alt="eco_icon">
-                    </div>
-                    <div class="li_bordure">
-                      <p>Economique</p>
-                    </div>
-                    <div class="radius">
-                    </div>
-                </li>
-                <li class="Familial">
-                    <div class="bordure_img">
-                      <img src="Images/Icon_filtres/Famille.png" alt="ico_famille">
-                    </div>
-                    <div class="li_bordure">
-                      <p>Familial</p>
-                    </div>
-                    <div class="radius">
-                    </div> 
+          <div class="filtres">
+              <h5>Filtres</h5>
+              <ul>
+                  <li class="li_economique">
+                      <div class="bordure_img">
+                          <i class="fas fa-money-bill-wave" id="economique_img" ></i>
+                      </div>
+                      <div class="li_bordure">
+                          <p>Économique</p>
+                      </div>
+                      <div class="radius">
+                      </div>
                   </li>
-                <li class="Romantique">
-                  <div class="bordure_img">
-                    <img src="Images/Icon_filtres/Romantique.png" alt="ico_romantique">
-                  </div><div class="li_bordure">
-                    <p>Romantique</p>
-                  </div>
-                  <div class="radius">
-                  </div>  
-                </li>
-                <li class="Animaux">
-                  <div class="bordure_img">
-                    <img src="Images/Icon_filtres/animaux.png" alt="ico_animaux">
-                  </div><div class="li_bordure">
-                    <p>Animaux autorisés</p>
-                  </div>
-                  <div class="radius">
-                  </div> 
-                </li>
-            </ul>
+                  <li class="Familial">
+                      <div class="bordure_img">
+                          <i class="fas fa-child" id="Familial_img"></i>
+                      </div>
+                      <div class="li_bordure">
+                          <p>Familial</p>
+                      </div>
+                      <div class="radius">
+                      </div> 
+                  </li>
+                  <li class="Romantique">
+                      <div class="bordure_img">
+                          <i class="fas fa-heart" id="Romantique_img" ></i>
+                      </div><div class="li_bordure">
+                          <p>Romantique</p>
+                      </div>
+                      <div class="radius">
+                      </div>  
+                  </li>
+                  <li class="Animaux">
+                      <div class="bordure_img">
+                          <i class="fas fa-dog" id="Animaux_img"></i>
+                      </div><div class="li_bordure">
+                          <p>Animaux autorisés</p>
+                      </div>
+                      <div class="radius">
+                      </div> 
+                  </li>
+              </ul>
           </div>
           <div class="info">
-            <img src="Images/Icon_filtres/Information.png" alt="ico_info">
-            <h5>Plus de 500 logements sont disponible dans cette ville </h5> 
+              <img src="Images/Icon_filtres/Information.png" alt="ico_info">
+              <h5>Plus de 500 logements sont disponibles dans cette ville </h5> 
           </div>
       </nav>
       <!------------------------------------------------------------------------Section 1-------------------------------------------------------------------------------->
       <section class="section_1">
-
-      <!------------------------------------------------------------------------Les populaires---------------------------------------------->  
-        <div class="les_pop"> 
-          <h3>Les plus populaires</h3>
-          <div class="aperçu_pop">
-              <div class="Pop_img">
-                <div>
-                  <a href="#"><img src="Images/hebergements/3_medium/Hôtel_soleil.jpg" alt="" class="Photo_pop"><div class="notation_hôtel"><p class="Nom_hôtel">Auberge la cannebière</p> <p>Nuit à partir de 25 €</p><div><img src="Images/Icon_filtres/estrella.png" alt="etoile"><img src="Images/Icon_filtres/estrella.png" alt="etoile"><img src="Images/Icon_filtres/estrella.png" alt="etoile"><img src="Images/Icon_filtres/estrella.png" alt="etoile"><img src="Images/Icon_filtres/estrella.png" alt="etoile"></div></div></a>
-                </div>
+            <!------------------------------------------------------------------------Les populaires---------------------------------------------->  
+          <div class="les_pop"> 
+              <h3>Les plus populaires</h3>
+              <div class="icon_augmentation">
+                  <i class="fas fa-chart-line"></i>
               </div>
-              <div class="Pop_img">
-                  <div>
-                    <a href="#"><img src="Images/hebergements/3_medium/hôtel_eau.jpg" alt="" class="Photo_pop"><div class="notation_hôtel"><p class="Nom_hôtel">Auberge la cannebière</p> <p>Nuit à partir de 25 €</p><div><img src="Images/Icon_filtres/estrella.png" alt="etoile"><img src="Images/Icon_filtres/estrella.png" alt="etoile"><img src="Images/Icon_filtres/estrella.png" alt="etoile"><img src="Images/Icon_filtres/estrella.png" alt="etoile"><img src="Images/Icon_filtres/estrella_vide.png" alt=""></div></div></a>
+              <div class="aperçu_pop">
+                  <div class="Pop_img">
+                      <div>
+                          <a href="#">
+                              <img src="Images/hebergements/3_medium/Hôtel_soleil.jpg" alt="" class="Photo_pop">
+                              <div class="notation_hôtel">
+                                  <p class="Nom_hôtel">Hôtel Le soleil du matin</p> 
+                                  <p class="Prix_nuit">Nuit à partir de 128€</p>
+                                  <div>
+                                      <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                                      <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                                      <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                                      <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                                      <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                                  </div>
+                              </div>
+                          </a>
+                      </div>
                   </div>
-              </div>
-              <div class="Pop_img">
-                  <div>
-                    <a href="#"><img src="Images/hebergements/3_medium/hotel_bleu.jpg" alt="" class="Photo_pop"><div class="notation_hôtel"><p class="Nom_hôtel">Auberge la cannebière</p> <p>Nuit à partir de 25 €</p><div><img src="Images/Icon_filtres/estrella.png" alt="etoile"><img src="Images/Icon_filtres/estrella.png" alt="etoile"><img src="Images/Icon_filtres/estrella.png" alt="etoile"><img src="Images/Icon_filtres/estrella.png" alt="etoile"><img src="Images/Icon_filtres/estrella_vide.png" alt=""></div></div></a>
+                  <div class="Pop_img">
+                      <div>
+                          <a href="#">
+                              <img src="Images/hebergements/3_medium/hôtel_eau.jpg" alt="" class="Photo_pop">
+                              <div class="notation_hôtel">
+                                  <p class="Nom_hôtel">Au coeur de l'eau Chambre d'hôtes</p>
+                                  <p class="Prix_nuit">Nuit à partir de 71€</p>
+                                  <div>
+                                      <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                                      <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                                      <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                                      <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                                      <img src="Images/Icon_filtres/estrella_vide.png" alt="">
+                                  </div>
+                            </div>
+                          </a>
+                      </div>
+                  </div>
+                  <div class="Pop_img" id="last_pop">
+                      <div>
+                          <a href="#">
+                              <img src="Images/hebergements/3_medium/hotel_bleu.jpg" alt="" class="Photo_pop">
+                              <div class="notation_hôtel">
+                                  <p class="Nom_hôtel">Hôtel Tout bleua et blanc</p> 
+                                  <p class="Prix_nuit">Nuit à partir de 68€</p>
+                                  <div>
+                                      <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                                      <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                                      <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                                      <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                                      <img src="Images/Icon_filtres/estrella_vide.png" alt="">
+                                </div>
+                              </div>
+                          </a>
+                      </div>
                   </div>
               </div>
           </div>
-        </div>
         
       <!-------------------------------------------------------------------Hebergements marseille------------------------------------------->
-        <div class="hebergements_marseille">
+        <div class="hebergements_marseille" id="ancre_hebergements">
           <h3>Hébergement à Marseille</h3>
           <div class="aperçu_hebergements">
               <div class="hebergements_img">
                   <div>
-                    <a href="#"><img src="Images/hebergements/3_medium/Auberge la cannebière.jpg" alt="Auberge_la cannebière" class="aperçu"><div><p class="Nom_hôtel">Auberge la cannebière</p> <p>Nuit à partir de 25 €</p><div><img src="Images/Icon_filtres/estrella.png" alt="etoile"><img src="Images/Icon_filtres/estrella.png" alt="etoile"><img src="Images/Icon_filtres/estrella.png" alt="etoile"><img src="Images/Icon_filtres/estrella.png" alt="etoile"><img src="Images/Icon_filtres/estrella_vide.png" alt=""></div></div></a>
+                      <a href="#">
+                          <img src="Images/hebergements/3_medium/Auberge la cannebière.jpg" alt="Auberge_la cannebière" class="aperçu">
+                          <div class="notation_hebergement">
+                              <p class="Nom_hôtel">Auberge la cannebière</p>
+                              <p class="Prix_nuit">Nuit à partir de 25€</p>
+                              <div>
+                                  <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                                  <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                                  <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                                  <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                                  <img src="Images/Icon_filtres/estrella_vide.png" alt="">
+                              </div>
+                          </div>
+                      </a>
                   </div>
               </div>
               <div class="hebergements_img">
                 <div>
-                  <a href="#"><img src="Images/hebergements/3_medium/Hôtel_du_port.jpg" alt="" class="aperçu"><div><p class="Nom_hôtel">Auberge la cannebière</p><p>Nuit à partir de 25 €</p><div><img src="Images/Icon_filtres/estrella.png" alt="etoile"><img src="Images/Icon_filtres/estrella.png" alt="etoile"><img src="Images/Icon_filtres/estrella.png" alt="etoile"><img src="Images/Icon_filtres/estrella.png" alt="etoile"><img src="Images/Icon_filtres/estrella.png" alt="etoile"></div></div></a>
+                  <a href="#">
+                      <img src="Images/hebergements/3_medium/Hôtel_du_port.jpg" alt="" class="aperçu">
+                      <div class="notation_hebergement">
+                          <p class="Nom_hôtel">Hôtel du port</p>
+                          <p class="Prix_nuit">Nuit à partir de 52€</p>
+                          <div>
+                              <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                              <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                              <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                              <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                              <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                          </div>
+                      </div>
+                  </a>
                 </div>
               </div>
               <div class="hebergements_img">
                 <div>
-                  <a href="#"><img src="Images/hebergements/3_medium/hôtel_mouette.jpg" alt="" class="aperçu"><div><p class="Nom_hôtel">Auberge la cannebière</p><p>Nuit à partir de 25 €</p><div><img src="Images/Icon_filtres/estrella.png" alt="etoile"><img src="Images/Icon_filtres/estrella.png" alt="etoile"><img src="Images/Icon_filtres/estrella.png" alt="etoile"><img src="Images/Icon_filtres/estrella.png" alt="etoile"><img src="Images/Icon_filtres/estrella_vide.png" alt=""></div></div></a>
+                    <a href="#"><img src="Images/hebergements/3_medium/hôtel_mouette.jpg" alt="" class="aperçu">
+                        <div class="notation_hebergement">
+                            <p class="Nom_hôtel">Hôtel Les mouettes</p>
+                            <p class="Prix_nuit">Nuit à partir de 76€</p>
+                            <div>
+                                <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                                <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                                <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                                <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                                <img src="Images/Icon_filtres/estrella_vide.png" alt="">
+                            </div>
+                        </div>
+                    </a>
                 </div>
               </div>
               <div class="hebergements_img">
                 <div>
-                  <a href="#"><img src="Images/hebergements/3_medium/hotel_mer.jpg" alt="" class="aperçu"><div><p class="Nom_hôtel">Auberge la cannebière</p> <p>Nuit à partir de 25 €</p><div><img src="Images/Icon_filtres/estrella.png" alt="etoile"><img src="Images/Icon_filtres/estrella.png" alt="etoile"><img src="Images/Icon_filtres/estrella.png" alt="etoile"><img src="Images/Icon_filtres/estrella_vide.png" alt=""><img src="Images/Icon_filtres/estrella_vide.png" alt=""></div></div></a>
+                  <a href="#">
+                      <img src="Images/hebergements/3_medium/hotel_mer.jpg" alt="" class="aperçu">
+                      <div class="notation_hebergement">
+                          <p class="Nom_hôtel">Hôtel de la mer</p>
+                          <p class="Prix_nuit">Nuit à partir de 46€</p>
+                          <div>
+                              <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                              <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                              <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                              <img src="Images/Icon_filtres/estrella_vide.png" alt="">
+                              <img src="Images/Icon_filtres/estrella_vide.png" alt="">
+                          </div>
+                      </div>
+                  </a>
                 </div>
               </div>
               <div class="hebergements_img">
                 <div>
-                  <a href="#"><img src="Images/hebergements/3_medium/Auberge_panier.jpg" alt="" class="aperçu"><div><p class="Nom_hôtel">Auberge la cannebière</p> <p>Nuit à partir de 25 €</p><div><img src="Images/Icon_filtres/estrella.png" alt="etoile"><img src="Images/Icon_filtres/estrella.png" alt="etoile"><img src="Images/Icon_filtres/estrella.png" alt="etoile"><img src="Images/Icon_filtres/estrella.png" alt="etoile"><img src="Images/Icon_filtres/estrella_vide.png" alt=""></div></div></a>
+                    <a href="#">
+                      <img src="Images/hebergements/3_medium/Auberge_panier.jpg" alt="" class="aperçu">
+                      <div class="notation_hebergement">
+                          <p class="Nom_hôtel">Auberge Le Panier</p>
+                          <p class="Prix_nuit">Nuit à partir de 23€</p>
+                          <div>
+                              <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                              <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                              <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                              <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                              <img src="Images/Icon_filtres/estrella_vide.png" alt="">
+                          </div>
+                      </div>
+                    </a>
                 </div>
               </div>
-              <div class="hebergements_img">
+              <div class="hebergements_img" id="last_hebergements">
                 <div>
-                  <a href="#"><img src="Images/hebergements/3_medium/hotel_amina.jpg" alt="" class="aperçu"><div><p class="Nom_hôtel">Auberge la cannebière</p> <p>Nuit à partir de 25 €</p><div><img src="Images/Icon_filtres/estrella.png" alt="etoile"><img src="Images/Icon_filtres/estrella.png" alt="etoile"><img src="Images/Icon_filtres/estrella.png" alt="etoile"><img src="Images/Icon_filtres/estrella.png" alt="etoile"><img src="Images/Icon_filtres/estrella.png" alt="etoile"></div></div></a>
+                    <a href="#">
+                        <img src="Images/hebergements/3_medium/hotel_amina.jpg" alt="" class="aperçu">
+                        <div class="notation_hebergement">
+                          <p class="Nom_hôtel">Hôtel chez Amina</p> 
+                          <p class="Prix_nuit">Nuit à partir de 96€</p>
+                          <div>
+                              <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                              <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                              <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                              <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                              <img src="Images/Icon_filtres/estrella.png" alt="etoile">
+                          </div>
+                        </div>
+                    </a>
                 </div>
               </div>
           </div>
+          <p class="afficher_plus">Afficher plus</p>
         </div>
       </section>
       <!------------------------------------------------------------------------Section 2-------------------------------------------------------------------------------->
       <section class="section_2">
           <h3>Activités à Marseille</h3>
-          <div class="activité_marseille">
-              <div id="Vieux_port" class="Cannebière">
-                <div>
-                  <a href="#"><img src="Images/activites/3_medium/Vieux_port.jpg" alt="" class="aperçu_activé"> <p class="nom_activité">Auberge la cannebière</p> </a>
+          <div class="activité_marseille" id="ancre_activité">
+                <div id="Vieux_port" class="Cannebière">
+                    <div>
+                        <a href="#">
+                            <img src="Images/activites/3_medium/Vieux_port.jpg" alt="" class="aperçu_activé"> 
+                            <p class="nom_activité">Vieux Port</p> 
+                        </a>
+                    </div>
                 </div>
-              </div>
-              <div id="Pomègue" class="Cannebière">
-                <div>
-                  <a href="" ><img src="Images/activites/3_medium/Fort_Pomègues.jpg" alt="" class="aperçu_activé"><p class="nom_activité">Auberge la cannebière</p></a>
+                <div id="Pomègue" class="Cannebière">
+                    <div>
+                        <a href="" >
+                          <img src="Images/activites/3_medium/Fort_Pomègues.jpg" alt="" class="aperçu_activé">
+                          <p class="nom_activité">Fort de Pomègues</p>
+                        </a>
+                    </div>
                 </div>
-              </div>
-              <div id="frioul" class="Cannebière">
-                <div>
-                  <a href=""><img src="Images/activites/3_medium/Frioul.jpg" alt="" class="aperçu_activé"><p class="nom_activité">Auberge la cannebière</p> </a>
+                <div id="frioul" class="Cannebière">
+                    <div>
+                        <a href="">
+                            <img src="Images/activites/3_medium/Frioul.jpg" alt="" class="aperçu_activé">
+                            <p class="nom_activité">Îles du Frioul</p> 
+                        </a>
+                    </div>
                 </div>
-              </div>
-              <div id="calanques" class="Cannebière">
-                <div>
-                  <a href=""> <img src="Images/activites/3_medium/calanques.jpg" alt="" class="aperçu_activé"><p class="nom_activité">Auberge la cannebière</p> </a>
+                <div id="calanques" class="Cannebière">
+                    <div>
+                        <a href=""> 
+                          <img src="Images/activites/3_medium/calanques.jpg" alt="" class="aperçu_activé">
+                          <p class="nom_activité">Parc National des Calanques</p> 
+                        </a>
+                    </div>
                 </div>
-              </div>
-              <div id="notre_dame" class="Cannebière">
-                <div>
-                  <a href=""><img src="Images/activites/3_medium/Notre_dame.jpg" alt="" class="aperçu_activé"><p class="nom_activité">Auberge la cannebière</p> </a>
+                <div id="notre_dame" class="Cannebière">
+                    <div>
+                        <a href="">
+                          <img src="Images/activites/3_medium/Notre_dame.jpg" alt="" class="aperçu_activé">
+                          <p class="nom_activité">Notre-Dame-de-la-Garde</p> 
+                        </a>
+                    </div>
                 </div>
-              </div>
-              <div id="longchamp" class="Cannebière">
-                <div>
-                  <a href=""><img src="Images/activites/3_medium/Parc_Longchamp.jpg" alt="" class="aperçu_activé"><p class="nom_activité">Auberge la cannebière</p> </a>
+                <div id="longchamp" class="Cannebière">
+                    <div>
+                        <a href="">
+                            <img src="Images/activites/3_medium/Parc_Longchamp.jpg" alt="" class="aperçu_activé">
+                            <p class="nom_activité">Parc longchamp</p> 
+                        </a>
+                    </div>
                 </div>
-              </div>
           </div>
       </section>
       <!----------------------------------------------------------------------Pied de page------------------------------------------------------------------------------->
       <footer>
-          <div>
-            <h4>A propos</h4>
-            <ul>
-              <li>Fonctionnement du site</li>
-              <li>Conditions générales de vente</li>
-              <li>Données et confidentialité</li>
-            </ul>
-          </div>
-          <div>
-            <h4>Nos hébergements</h4>
-              <ul>
-                  <li>Charte qualité</li>
-                  <li>Soumettre votre hôtel</li>
+          <div class="a_propos">
+              <h4>A propos</h4>
+              <ul class="lu_a_propos">
+                  <li>Fonctionnement du site</li>
+                  <li>Conditions générales de vente</li>
+                  <li class="last_li">Données et confidentialité</li>
               </ul>
           </div>
-          <div>
-            <h4>Assisatance</h4>
-            <ul>
-              <li>Centre d'aide</li>
-              <li>Nous contacter</li>
-            </ul>
+          <div class="hébergements">
+              <h4>Nos hébergements</h4>
+              <ul class="ul_hébergements">
+                  <li>Charte qualité</li>
+                  <li class="last_li">Soumettre votre hôtel</li>
+              </ul>
+          </div>
+          <div class="assistance">
+              <h4>Assistance</h4>
+              <ul class="ul_assistance">
+                  <li>Centre d'aide</li>
+                  <li class="last_li">Nous contacter</li>
+              </ul>
           </div>
       </footer>
         

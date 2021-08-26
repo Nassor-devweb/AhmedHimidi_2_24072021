@@ -1,8 +1,14 @@
 
 /*---------------------------------------------------Réglages généraux----------------------------------------------------------*/ 
 @font-face {
-    font-family: ('Raleway');
-    src: url('Fonts/Raleway/Raleway-VariableFont_wght.ttf'); format("opentype");
+    font-family:"Raleway";
+    src: url("../Fonts/Raleway/Raleway-Regular.ttf") format("truetype");
+    font-weight: normal;
+}
+@font-face{
+    font-family: "Raleway";
+    src: url("../Fonts/Raleway/Raleway-Bold.ttf");
+    font-weight: bold;
 }
 *{
     box-sizing: border-box;
@@ -10,50 +16,65 @@
 body{
     margin: 0px;
     color: black;
+    font-family: "Raleway";
+}
+img{
+    object-fit: cover;
 }
 
 /*-----------------------------------------------Entête du site-----------------------------------------------------------------*/
 
-header {
+header{
+    font-size: 12px;
+}
+.entete_navigation{
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
 }
 .logo_reservia{
     width: 50%;
-    padding-left: 16px;
+    padding-left: 21px;
+}
+.logo_reservia img{
+    margin-top: 25px;
+}
+.navigation_1 {
+    position: relative;
+    height: 70px;
+}
+.navigation_1 a{
+    position: absolute;
+    font-weight: bold;
+    right: 0px;
+    width: 60px;
+    margin-right: 21px;
+    margin-top: 43px;
+    color: rgb(0,101,252);
 }
 .navigation_1,.navigation_2,.navigation_3 {
     width: 50%;
 }
-.navigation_1 {
-    text-align: right;
-    padding-right: 16px;
-    color: black;
-    display: flex;
-    align-items: center;
-}
 .navigation_2,.navigation_3 {
-    text-align: center;
-    height: 49px;
+    border-bottom:  rgb(242,242, 242) 3px solid; 
     display: flex;
+    text-align: center;
     align-items: center;
+    height: 49px;
     color: black;
 }
-.navigation_1 a{
-    width: 100%;
-    color: blue;
-}
+
 .navigation_2 a,.navigation_3 a {
     width: 100%;
     color: black;
 
 }
 .navigation_2:hover,.navigation_3:hover {
-    border-bottom: blue 2px solid;
+    border-bottom: rgb(0, 101, 252) 3px solid;
+    color: rgb(0, 101, 252);
 }
 .navigation_2 a:hover,.navigation_3 a:hover{
-    color: blue;
+    color: rgb(0, 101, 252);
 } 
     
 header a{
@@ -62,66 +83,101 @@ header a{
 
 /*------------------------------------------------------------------Menu de gavigation------------------------------------------------------*/
 
-nav {
-    padding-left: 16px;
-    padding-right: 16px;
+.navigation_recherche {
+    padding-left: 21px;
+    padding-right: 21px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
 }
+.Titre_nav h2{
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 36px;
+    margin-bottom: 16px;
+}
+.Titre_nav p{
+    font-size: 12px;
+    margin-bottom: 36px;
+}
 #form_localisation{
     width: 100%;
+    margin-bottom: 37px;
+    height: 40px;
 }
 
-form{
+#form_localisation form{
+    position: relative;
     display: flex;
     width: 100%;
-
+    height: 100%;
 }
 
 form label{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 30px;
-    width: 40px;
-    background-color: #DCDCDC;
+    height: 100%;
+    width: 15%;
+    background-color: rgb(242,242,242);
     border-radius: 7px 0px 0px 7px;
 }
 
 form label img {
     height: 20px;
     width: 20px;
-    background-color: rgb(239,239,239);
+    background-color: rgb(242,242,242);
 }
-form button{
-    padding: 0px;
-    border: 0px;
-    height: 30px;
-    width: 30px;
-    border-radius: 7px 7px 7px 7px;
-    margin-left: -4px;
-    z-index: 2;
-}
+
 form button img{
     height: 30px;
     width: 30px;
     border-radius: 7px 7px 7px 7px;
 }
 form input {
+    height: 100%;
+    width: 73%;
+    font-size: 13px;
+    font-weight: bold;
     color: black;
     border-left: 0px ;
     border-right: 0px ;
     border-top: 1px solid #DCDCDC ;
     border-bottom: 1px solid #DCDCDC ;
-    height: 30px;
     z-index: 1;
+}
+.bouton_search{
+    position: absolute;
+    right: 0px;
+    padding: 0px;
+    border: 0px;
+    height: 100%;
+    width: 15%;
+    border-radius: 7px 7px 7px 7px;
+    background-color: rgb(0,101,252);
+    margin-left: -4px;
+    z-index: 2;
+}
+#seach{
+   color: white ;
 }
 
 /*-------------------------------Navigation liste à puce (Filtre)--------------------------------------*/
 
+.filtres li:hover{
+    cursor: pointer;
+    transform: scale(1.08);
+}
+.filtres h5{
+    width: 52px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
 nav ul {
-
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 0px;
     padding-left: 0px;
     display: flex;
     justify-content: space-between;
@@ -130,16 +186,16 @@ nav ul {
 }
 nav div ul li {
     position: relative;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    height: 30px;
+    margin-top: 0px;
+    margin-bottom: 13px;
+    height: 46px;
     display: flex;   
 }
 .li_economique{
-    width: 160px;
+    width: 177px;
 }
 .li_economique .li_bordure{
-    width: 120px;
+    width: 137px;
 }
 .Familial{
     width: 140px;
@@ -148,33 +204,34 @@ nav div ul li {
     width: 100px;
 }
 .Romantique{
-    width: 160px;
+    width: 177px;
 }
 .Romantique .li_bordure{
-    width: 120px;
+    width: 137px;
 }
 .Animaux{
-    width: 200px;
+    width: 220px;
+    margin-bottom: 0px;
 }
 .Animaux .li_bordure{
-    width: 160px;
+    width: 180px;
 }
 .bordure_img{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 30px;
-    width: 30px;
+    height: 100%;
+    width: 50px;
     border: 2px solid #DEEBFF; 
     border-radius: 50%;
     background-color: #DEEBFF;
     z-index: 2;
 }
 .radius{
-    height: 30px;
+    height: 100%;
     width: 30px;
-    border-right: 1px solid #DCDCDC;
-    border-top: 1px solid #DCDCDC ;
+    border-right: 2px solid #DCDCDC;
+    border-top: 2px solid #DCDCDC ;
     border-bottom: 1px solid #DCDCDC ;
     border-radius: 0% 50% 50% 0%;
     position: absolute;
@@ -184,25 +241,38 @@ nav div ul li {
     display: flex;
     align-items: center;
     text-align: center;
-    border-top: 1px solid #DCDCDC ;
-    border-bottom: 1px solid #DCDCDC ;
-    margin-left: -13px;
+    border-top: 2px solid #DCDCDC ;
+    border-bottom: 2px solid #DCDCDC ;
+    margin-left: -22px;
     z-index: 1;
 }
 nav div ul li p {
     width: 100%;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
-nav li img{
-    height: 70%;
-    width: 70%;
+nav div ul li #economique_img{
+    font-size: 17px;
+    color: rgb(0,101,252);
+}
+nav div ul li #Familial_img{
+    font-size: 17px;
+    color: rgb(0,101,252);
+}
+nav div ul li #Romantique_img{
+    font-size: 17px;
+    color: rgb(0,101,252);
+}
+nav div ul li #Animaux_img{
+    font-size: 17px;
+    color: rgb(0,101,252);
 }
 
 /*------------------------------------------------------Navigation information----------------------------------------------------*/
 
 .info{
-    height: 50px;
+    font-size: 12px;
+    height: 55px;
     display: flex;
     align-items: center;
     
@@ -210,9 +280,10 @@ nav li img{
 .info img {
     width: 20px;
     height: 20px;
+    margin-top: 22px;
 }
 .info h5{
-    margin: 12px 0px 0px 8px;
+    margin: 34px 0px 0px 12px;
 }
 
 /*------------------------------Section_1---------------------*/
@@ -220,30 +291,43 @@ nav li img{
 .section_1{
     display: flex;
     flex-wrap: wrap;
-    margin-top: 10px;
+    margin-top: 40px;
 }
 .hebergements_marseille h3{
+    margin-top: 40px;
+    margin-bottom: 24px;
     width: 300px;
-    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
 }
 .les_pop h3{
     width: 200px;
-    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 26px;
+    font-size: 16px;
+    font-weight: bold;
 }
 .section_2 h3{
     width: 270px;
-    text-align: center;
-    margin: 18px 0px;
+    margin-top: 0px;
+    margin-bottom: 32px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 /*------------------------------Les populaires---------------*/
 .les_pop{
-    background-color: rgb(239,239,239);
+    background-color: rgb(242,242,242);
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin-bottom: 15px;  
+    justify-content: space-between;
+    padding-left: 21px;
+    padding-right: 21px;
+}
+.icon_augmentation{
+    width: 21px;
+    margin-top: 40px;
 }
 .aperçu_pop{
     width: 100%;
@@ -253,16 +337,20 @@ nav li img{
     align-content: space-around;
 }
 .Pop_img{
-    margin-bottom: 15px;
-    border: 4px solid white;
-    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 5px solid white;
+    border-radius: 10px;
     box-shadow: 3px 3px 3px rgba(28,26,25,0.1);
-    width: 90%;
+    width: 100%;
     height: 100px;
+}
+.aperçu_pop #last_pop{
+    margin-bottom: 37px;
 }
 .Pop_img>div{
     width: 100%;
     height: 100%;
+    border-radius: 8px 0px 0px 8px;
 }
 .Pop_img a{
     display: flex;
@@ -279,13 +367,14 @@ nav li img{
     display: flex;
     flex-wrap: wrap;
     background-color: white;
+    padding: 9px 0px 4px 10px;
     width: 60%;
     height: 100%;
     position:absolute;
     right: 0px;
+
 }
 .Pop_img a p{
-    margin-left: 5px;
     margin-top: 0px;
     margin-bottom: 0px;
     width: 100%;
@@ -293,17 +382,16 @@ nav li img{
     color: black;
 }
 .notation_hôtel div{
-    height: 15px;
-    width: 100%;
+    height: 12px;
+    width: 70%;
     display: flex;
     margin-bottom: 0px;
-    margin-left: 5px;
     position: absolute;
     bottom: 2px;
 }
 .Pop_img a div div img{
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
 }
 
 /*------------------------------Hébergement marseille------------*/
@@ -311,29 +399,36 @@ nav li img{
     width: 100%;
     display: flex;
     flex-wrap: wrap ; 
-    margin-bottom: 15px;    
+    margin-bottom: 60px;
+    padding-left: 21px;    
+    padding-right: 21px;
 }
 .aperçu_hebergements{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
     align-content: space-between;
+    margin-bottom: 35px;
 }
 .hebergements_img{
-    margin-bottom: 15px;
-    border: 4px solid white;
-    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 5px solid white;
+    border-radius: 10px;
     box-shadow: 3px 3px 3px rgba(28,26,25,0.1);
-    width: 90%;
+    width: 100%;
     height: 140px;
 }
+.aperçu_hebergements #last_hebergements{
+    margin-bottom: 0px;
+}
 .hebergements_img>div{
+    border-radius: 8px 8px 0px 0px;
     width: 100%;
     height: 100%;
 }
 .hebergements_img a{
     display: inline-block;
+    border-radius: 8px 8px 0px 0px;
     height: 100%;
     width: 100%;
     position: relative;
@@ -343,31 +438,49 @@ nav li img{
     width: 100%;
     height: 100%;
 }
-.hebergements_img a div{
+.notation_hebergement{
     background-color: white;
     width: 100%;
     position:absolute;
     bottom: 0px;
     height: 50px;
+    padding: 4px 0px 4px 10px;
 }
 .hebergements_img a p{
     margin-left: 5px;
-    margin-top: 0px;
     margin-bottom: 0px;
     width: 100%;
     color: black;
 }
 .Nom_hôtel{
+    margin-top: 0px;
+    font-size: 12px;
     font-weight: bold;
+
 }
-.hebergements_img a div div,.hebergements_img a div div img{
-    width: 15px;
-    height: 15px;
+.Prix_nuit{
+     font-size: 10px;
+     margin-top: 3px;
+}
+
+.hebergements_img a div div img{
+    width: 12px;
+    height: 12px;
 }
 .hebergements_img a div div{
     display: flex;
+    position: absolute;
+    bottom: 0px;
     margin-bottom: 0px;
     margin-left: 5px;
+    width: 75px;
+    height: 12px;
+}
+.hebergements_marseille .afficher_plus{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 /*--------------------------------------Section_2----------------------*/
@@ -375,6 +488,8 @@ nav li img{
 .section_2{
     display: flex;
     flex-direction: column;
+    padding-left: 21px;
+    padding-right: 21px;
 }
 
 .activité_marseille{
@@ -382,13 +497,17 @@ nav li img{
     justify-content: space-around;
     align-content: space-around;
     flex-wrap: wrap;
-    border-radius: 20px;
-    margin-bottom: 15px;  
+    margin-bottom: 49px;  
+}
+.flaot_activités{
+    width: 100%;
 }
 .Cannebière{
-    width: 90% ;   
+    font-size: 12px;
+    font-weight: bold;
+    width: 100% ;   
     height: 140px ;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     border-radius: 8px;
     box-shadow: 3px 3px 3px rgba(28,26,25,0.1);
 }
@@ -410,7 +529,7 @@ nav li img{
     border-radius: 0px 0px 8px 8px;
     bottom: 0px;
     margin: 0px;
-    Padding-left: 15px;
+    Padding-left: 20px;
     width: 100%;
     height: 30px;
     color: black;
@@ -420,33 +539,482 @@ nav li img{
     width: 100%;
     height: 100%;
 }
+#longchamp{
+    margin-bottom: 0px;
+}
 
 /*-----------------------------------Footer------------------------*/
 
 footer{
     display: flex;
+    flex-direction: column;
     width: 100%;
+    height: 486px;
     justify-content: space-around;
     flex-wrap: wrap;
     background-color: rgb(239,239,239) ;
+    padding-top: 49px;
+    padding-left: 33px;
+    position: relative;
 }
 footer div{
     width: 100%;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
+    position: relative;
 }
-footer div h4, footer div ul{
+footer div h4{
+    font-size: 13px;
+    margin-bottom: 27px;
+    margin-top: 0px;
     width: 70%;
-    margin: 5px auto;
 }
-footer ul{
+footer div ul{
+    font-size: 12px;
+    margin-top: 0px;
     list-style-type: none;
     padding: 0px;
+    width: 70%;
+}
+footer div ul li{
+    margin-bottom: 18px;
+}
+footer .last_li{
+    margin-bottom: 0px;
 }
 
+/*------------------------------------------Média querries--------------------------------------------*/
+
+@media screen and (min-width:375px) and (max-width:480px) {
+
+/*------------------------------------Menu de navigation---------------------------*/    
+    #form_localisation{
+        height: 51px;
+    }
+    .info h5{
+        margin: 30px 0px 0px 12px;
+    }
+
+/*--------------------------------Les populaires----------------------------*/
+    .notation_hôtel{
+        padding: 19px 0px 14px 21px ;
+    }
+    .Pop_img{
+        height: 144px;
+    }
+    .notation_hôtel div{
+        position: absolute;
+        bottom: 14px;
+    } 
+    .notation_hôtel .Prix_nuit{
+
+        position: absolute;
+        top: 55px;
+    }
+/*--------------------------------------Hebergements à Marseille---------------------------------------*/
+    .hebergements_img{
+        height: 200px;
+    }
+    .notation_hebergement{
+        padding: 12px 0px 4px 10px;
+        height: 70px;
+    }
+    .notation_hebergement .Prix_nuit{
+        position: absolute;
+        top: 30px;
+    }
+    .hebergements_img a div div{
+        position: absolute;
+        bottom: 5px;
+    }
+/*-----------------------------------------Section 2 (activitée à marseille)---------------------------*/
+    
+    .Cannebière{
+        height: 190px;
+    }
+    .nom_activité{
+        height: 56px;
+    }
+}
+@media screen and (min-width:481px) and (max-width:800px) {
+
+/*------------------------------------Menu de navigation---------------------------*/
+    #form_localisation {
+        width: 55%;
+        height: 45px;
+    }
+    .filtres li{
+        margin-right: 5px;
+    }
+
+/*--------------------------------------Les populaires----------------------------*/
+    .aperçu_pop{
+        padding-right: 20%;
+        padding-left:  20%;
+    }
+    .Pop_img{
+        height: 130px;
+    }
+/*--------------------------------------Hebergements à Marseille---------------------------------------*/   
+    .hebergements_img{
+        width: 45%;
+        height: 180px;
+    }
+    .aperçu_hebergements{
+        justify-content: space-between;
+    }
+/*--------------------------------------Activités de Marseille---------------------------------------*/  
+    .flaot_activités{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .Cannebière{
+        width: 45%;
+        height: 190px;
+    }
+/*----------------------------------------------Footer-----------------------------------------*/
+    footer div {
+         width: 33%;
+         
+    }
+    footer {
+        justify-content: space-between;
+        flex-direction: row;
+        height: 230px;
+    }
+    .a_propos h4, .hébergements h4, .assistance h4{
+        position: absolute;
+        top: 0px;
+    }
+    footer .a_propos ul, footer .hébergements ul, footer .assistance ul{
+        position: absolute;
+        top: 42px;
+    }
+}
+@media screen and (min-width:801px) and (max-width:991px) {
+    
+    #form_localisation{
+        width: 31%;
+    }
+
+    .section_1{
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-left: 21px;
+        padding-right: 21px;
+    }
+    .les_pop{
+        width: 38%;
+        height: 630px;
+        border-radius: 8px;
+        position: relative;
+    }
+    .les_pop h3{
+        margin-bottom: 0px;
+        height: 35.8px;
+    }
+    .aperçu_pop{
+        position: relative;
+        bottom: 26px;
+        align-content: space-between;
+    }
+    .Pop_img{
+        height: 130px;
+    }
+    .hebergements_marseille{
+        background-color: rgb(242,242,242);
+        width: 60%;
+        height: 630px;
+        border-radius: 10px;
+    }
+    .aperçu_hebergements{
+        justify-content: space-between;
+    }
+    .hebergements_img{
+        width: 45%;
+    }
+/*--------------------------------------Activités de Marseille---------------------------------------*/ 
+    .Cannebière{
+        width: 40%;
+        height: 150px;
+    }
+    .activité_marseille{
+        justify-content: space-around;
+    }
+
+/*----------------------------------------------Footer-----------------------------------------*/
+    footer div {
+        width: 33%;
+    }
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        height: 230px;
+    }
+        .a_propos h4, .hébergements h4, .assistance h4{
+        position: absolute;
+        top: 0px;
+    }
+        footer .a_propos ul, footer .hébergements ul, footer .assistance ul{
+        position: absolute;
+        top: 42px;
+    }
+}
+@media screen and (min-width:992px){
+
+/*------------------------------------------------Header---------------------------*/
+
+    .logo_reservia{
+        order: 1;
+    }
+    .entete_navigation{
+        position: relative;
+    }
+    .navigation_1{
+        width: 55px;
+        order: 4;
+        position: absolute;
+        right: 0px;
+    }
+    .navigation_2{
+        width: 84px;
+        order: 2;
+        position: absolute;
+        right: 268px;
+    }
+    .navigation_3{
+        width: 50px;
+        order: 3;
+        position: absolute;
+        right: 138px;
+    }
+    .navigation_1, .navigation_2, .navigation_3{
+        border-bottom: none;
+    }
+    .navigation_2, .navigation_3{
+        display: block;
+        height: 70px;
+    }
+    .navigation_2 a, .navigation_3 a{
+        margin-top: 43px;
+        margin-right: 0px;
+        display: inline-block;
+    }
+    .navigation_1 a{
+        margin-right: 0px;
+        width: 100%;
+    }
+/*------------------------------------Menu de navigation---------------------------*/
+    header{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .logo_reservia{
+        padding-left: 0px;
+    }
+    .navigation_recherche{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    #form_localisation{
+        width: 31%;
+        margin-bottom: 24px;
+    }
+    .filtres{
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .filtres h5{
+        width: 52px;
+        margin: auto 0px;
+    }
+    nav .filtres ul{
+        display: flex;
+        justify-content: flex-start;
+    }
+    .Animaux{
+        width: 200px;
+    }
+    .Animaux .li_bordure{
+        width: 160px;
+    }
+    .li_economique, .Animaux , .Romantique, .Familial{
+        margin-right: 24px;
+        margin-top: 13px;
+    }
+    .info h5{
+        margin: 28px 0px 0px 12px;
+    }
+/*---------------------------------------------------hebergements Marseille-------------------------------------------------*/
+    .section_1{
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .les_pop{
+        width: 31.3%;
+        height: 625px;
+        border-radius: 12px;
+        position: relative;
+        align-content: flex-start;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .les_pop h3{
+        margin-bottom: 24px;
+        height: 20px;
+    }
+    .aperçu_pop{
+        align-content: space-between;
+    }
+    .Pop_img{
+        height: 145px;
+    }
+    .Pop_img:first-child, .Pop_img:nth-child(2){
+        margin-bottom: 33px;
+    }
+    .Pop_img .Prix_nuit{
+        position: absolute;
+        top: 60px;
+    }
+    .hebergements_marseille{
+        background-color: rgb(242,242,242);
+        width: 65.6%;
+        height: 625px;
+        border-radius:12px;
+        align-content: flex-start;
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    .hebergements_marseille h3{
+        height: 20px;
+    }
+    .aperçu_hebergements{
+        justify-content: flex-start;
+        margin-bottom: 45px;
+    }
+    .hebergements_img{
+        width: 30.7%;
+        height: 200px;
+    }
+    .hebergements_img .Nom_hôtel{
+        position: absolute;
+        top: 12px;
+    }
+    .hebergements_img .Prix_nuit{
+        position: absolute;
+        top: 30px;
+    }
+    .hebergements_img:first-child, .hebergements_img:nth-child(2),.hebergements_img:nth-child(4),.hebergements_img:nth-child(5){
+        margin-right: 3.87%;
+    }
+    .hebergements_img:first-child, .hebergements_img:nth-child(2),.hebergements_img:nth-child(3){
+        margin-bottom: 3.87%;
+    }
+    .hebergements_img:nth-child(4), .hebergements_img:nth-child(5),.hebergements_img:nth-child(6){
+        margin-bottom: 0px;
+    }
+    .notation_hebergement{
+        height: 70px;
+    }
+
+/*---------------------------------------------------Activités de Marseille-------------------------------------------------*/
+    .section_2{
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 50px;
+        padding-right: 53px;
+    }
+    .section_2 h3{
+        width: 100%;
+    }
+    .activité_marseille{
+        justify-content: flex-start;
+        position: relative;
+    }
+    .flaot_activités{
+        width: 50%;
+    }
+    .Cannebière{
+        width: 22.585%;
+    }
+    #Vieux_port{
+        float: left;
+        height: 446px;
+    }
+    
+    #Pomègue{
+        height: 237px;
+        margin-bottom: 43px;
+        margin-left: 3.365%;
+        margin-right: 1.465%;
+        order: 2;
+    }
+    #frioul{
+        height: 166px;
+        margin-bottom: 0px;
+        margin-left: 3.365%;
+        position: absolute ;
+        left: 22.585% ;
+        top: 280px;
+        order: 5;
+
+    }
+    #calanques{
+        height: 446px;
+        margin-left: 1.465%;
+        order: 3;
+        margin-right: 3.365%;
+    }
+    #notre_dame{
+        height: 237px;
+        margin-bottom: 43px;
+        order: 4;
+    }
+    #longchamp{
+        height: 166px;
+        order: 6;
+        position: absolute;
+        right: 0px;
+        top: 280px;
+    }
+
+    .nom_activité{
+        height: 55px;
+    }
+    /*.Cannebière:nth-child(2), .Cannebière:nth-child(3), .Cannebière:nth-child(5), .Cannebière:nth-child(6){
+        margin-left: 5%;
+    }*/
+    /*.Cannebière:nth-child(2), .Cannebière:nth-child(3){
+        margin-right: 5%;
+    }*/
+
+/*----------------------------------------------Footer-----------------------------------------*/
+    footer div {
+        width: 33%;
+    }
+    footer {
+        flex-direction: row;
+        flex-wrap: wrap ;   
+        justify-content: space-between;
+        height: 230px;
+        }
+        .a_propos h4, .hébergements h4, .assistance h4{
+        position: absolute;
+        top: 0px;
+        }
+        footer .a_propos ul, footer .hébergements ul, footer .assistance ul{
+        position: absolute;
+        top: 42px;
+        }
 
 
+}
 
 
 
