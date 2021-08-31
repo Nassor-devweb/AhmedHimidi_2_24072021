@@ -161,6 +161,10 @@ form input {
 #seach{
    color: white ;
 }
+#recherche_search{
+    color: white;
+    display: none;
+}
 
 /*-------------------------------Navigation liste à puce (Filtre)--------------------------------------*/
 
@@ -233,7 +237,7 @@ nav div ul li {
     border-right: 2px solid #DCDCDC;
     border-top: 2px solid #DCDCDC ;
     border-bottom: 1px solid #DCDCDC ;
-    border-radius: 0% 50% 50% 0%;
+    border-radius: 0% 100% 100% 0%;
     position: absolute;
     right: 0px;
 }
@@ -243,6 +247,7 @@ nav div ul li {
     text-align: center;
     border-top: 2px solid #DCDCDC ;
     border-bottom: 2px solid #DCDCDC ;
+    border-radius: 0px 3px 3px 0px;
     margin-left: -22px;
     z-index: 1;
 }
@@ -798,13 +803,20 @@ footer .last_li{
         height: 70px;
     }
     .navigation_2 a, .navigation_3 a{
-        margin-top: 43px;
+        padding-top: 43px;
         margin-right: 0px;
         display: inline-block;
     }
     .navigation_1 a{
+        padding-top: 43px;
+        margin-top: 0px;
         margin-right: 0px;
         width: 100%;
+    }
+    .navigation_2:hover,.navigation_3:hover,.navigation_1:hover {
+        border-top: rgb(0, 101, 252) 3px solid;
+        border-bottom: none;
+        color: rgb(0, 101, 252);
     }
 /*------------------------------------Menu de navigation---------------------------*/
     header{
@@ -821,6 +833,19 @@ footer .last_li{
     #form_localisation{
         width: 31%;
         margin-bottom: 24px;
+    }
+    form input{
+        width: 56%
+    }
+    #seach{
+        color: white ;
+        display: none;
+     }
+    .bouton_search{
+        width: 32%;
+    }
+    #recherche_search{
+        display: block;
     }
     .filtres{
         width: 90%;
