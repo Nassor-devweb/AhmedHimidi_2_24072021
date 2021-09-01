@@ -122,18 +122,10 @@ form label{
     background-color: rgb(242,242,242);
     border-radius: 7px 0px 0px 7px;
 }
-
-form label img {
-    height: 20px;
-    width: 20px;
-    background-color: rgb(242,242,242);
+form label .lab_localisation{
+    color: black;
 }
 
-form button img{
-    height: 30px;
-    width: 30px;
-    border-radius: 7px 7px 7px 7px;
-}
 form input {
     height: 100%;
     width: 73%;
@@ -199,26 +191,26 @@ nav div ul li {
     width: 177px;
 }
 .li_economique .li_bordure{
-    width: 137px;
+    width: 177px;
 }
 .Familial{
     width: 140px;
 }
 .Familial .li_bordure{
-    width: 100px;
+    width: 140px;
 }
 .Romantique{
     width: 177px;
 }
 .Romantique .li_bordure{
-    width: 137px;
+    width: 177px;
 }
 .Animaux{
     width: 220px;
     margin-bottom: 0px;
 }
 .Animaux .li_bordure{
-    width: 180px;
+    width: 220px;
 }
 .bordure_img{
     display: flex;
@@ -231,7 +223,7 @@ nav div ul li {
     background-color: #DEEBFF;
     z-index: 2;
 }
-.radius{
+/*.radius{
     height: 100%;
     width: 30px;
     border-right: 2px solid #DCDCDC;
@@ -240,20 +232,24 @@ nav div ul li {
     border-radius: 0% 100% 100% 0%;
     position: absolute;
     right: 0px;
-}
+}*/
 .li_bordure{
+    position: absolute;
+    left: 0px;
     display: flex;
+    height: 100%;
     align-items: center;
-    text-align: center;
-    border-top: 2px solid #DCDCDC ;
-    border-bottom: 2px solid #DCDCDC ;
-    border-radius: 0px 3px 3px 0px;
-    margin-left: -22px;
+    border: 2px solid #DCDCDC ;
+    /*border-top: 2px solid #DCDCDC ;
+    border-bottom: 2px solid #DCDCDC ;*/
+    border-radius: 50px;
+    /*margin-left: -22px;*/
     z-index: 1;
 }
 nav div ul li p {
+    position: absolute;
+    left: 55px;
     width: 100%;
-    margin-left: 10px;
 }
 
 nav div ul li #economique_img{
@@ -330,9 +326,17 @@ nav div ul li #Animaux_img{
     padding-left: 21px;
     padding-right: 21px;
 }
+.titre_pop{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
 .icon_augmentation{
     width: 21px;
     margin-top: 40px;
+}
+.icon_augmentation .augmentation{
+    color: black;
 }
 .aperçu_pop{
     width: 100%;
@@ -394,9 +398,15 @@ nav div ul li #Animaux_img{
     position: absolute;
     bottom: 2px;
 }
-.Pop_img a div div img{
-    width: 12px;
-    height: 12px;
+.fas{
+    font-size: 12px;
+    color: rgb(0,101,252);
+}
+.fas:nth-child(2),.fas:nth-child(3),.fas:nth-child(4),.fas:nth-child(5){
+    margin-left: 2px;
+}
+div .etoile_vide{
+    color: rgb(217,217,217);
 }
 
 /*------------------------------Hébergement marseille------------*/
@@ -557,7 +567,7 @@ footer{
     height: 486px;
     justify-content: space-around;
     flex-wrap: wrap;
-    background-color: rgb(239,239,239) ;
+    background-color: rgb(242,242,242) ;
     padding-top: 49px;
     padding-left: 33px;
     position: relative;
@@ -652,6 +662,9 @@ footer .last_li{
     .filtres li{
         margin-right: 5px;
     }
+    .bouton_search{
+        border-radius: 0px 7px 7px 0px;
+    }
 
 /*--------------------------------------Les populaires----------------------------*/
     .aperçu_pop{
@@ -702,7 +715,9 @@ footer .last_li{
     #form_localisation{
         width: 31%;
     }
-
+    .bouton_search{
+        border-radius: 0px 7px 7px 0px;
+    }
     .section_1{
         flex-direction: row-reverse;
         align-items: flex-start;
@@ -842,6 +857,7 @@ footer .last_li{
         display: none;
      }
     .bouton_search{
+        border-radius: 0px 7px 7px 0px;
         width: 32%;
     }
     #recherche_search{
@@ -859,12 +875,6 @@ footer .last_li{
     nav .filtres ul{
         display: flex;
         justify-content: flex-start;
-    }
-    .Animaux{
-        width: 200px;
-    }
-    .Animaux .li_bordure{
-        width: 160px;
     }
     .li_economique, .Animaux , .Romantique, .Familial{
         margin-right: 24px;
@@ -966,6 +976,7 @@ footer .last_li{
         width: 50%;
     }
     .Cannebière{
+        margin-bottom: 0px;
         width: 22.585%;
     }
     #Vieux_port{
@@ -997,16 +1008,16 @@ footer .last_li{
         margin-right: 3.365%;
     }
     #notre_dame{
-        height: 237px;
+        height: 195px;
         margin-bottom: 43px;
         order: 4;
     }
     #longchamp{
-        height: 166px;
+        height: 209px;
         order: 6;
         position: absolute;
         right: 0px;
-        top: 280px;
+        top: 237px;
     }
 
     .nom_activité{
