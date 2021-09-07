@@ -154,6 +154,7 @@ form input {
    color: white ;
 }
 #recherche_search{
+    font-style: normal;
     color: white;
     display: none;
 }
@@ -218,21 +219,10 @@ nav div ul li {
     align-items: center;
     height: 100%;
     width: 50px;
-    border: 2px solid #DEEBFF; 
     border-radius: 50%;
     background-color: #DEEBFF;
     z-index: 2;
 }
-/*.radius{
-    height: 100%;
-    width: 30px;
-    border-right: 2px solid #DCDCDC;
-    border-top: 2px solid #DCDCDC ;
-    border-bottom: 1px solid #DCDCDC ;
-    border-radius: 0% 100% 100% 0%;
-    position: absolute;
-    right: 0px;
-}*/
 .li_bordure{
     position: absolute;
     left: 0px;
@@ -240,10 +230,7 @@ nav div ul li {
     height: 100%;
     align-items: center;
     border: 2px solid #DCDCDC ;
-    /*border-top: 2px solid #DCDCDC ;
-    border-bottom: 2px solid #DCDCDC ;*/
     border-radius: 50px;
-    /*margin-left: -22px;*/
     z-index: 1;
 }
 nav div ul li p {
@@ -251,7 +238,6 @@ nav div ul li p {
     left: 55px;
     width: 100%;
 }
-
 nav div ul li #economique_img{
     font-size: 17px;
     color: rgb(0,101,252);
